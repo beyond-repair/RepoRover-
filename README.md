@@ -1,42 +1,108 @@
-# RepoRover
+# RepoRover — GitHub Portfolio Intelligence
 
-RepoRover is a Python script designed to gather and process information from GitHub repositories' README.md files. It's a powerful tool for extracting insights into the content of various projects, allowing you to analyze and categorize repositories based on their documentation.
+**Status:** Resurrection target (v1 scraper → v2 intelligence)  
+**Lab:** [Atomic Dream Labs / beyond-repair](https://github.com/beyond-repair)  
+**License:** MIT (see LICENSE if present)
+
+---
+
+## Purpose
+
+RepoRover turns a GitHub account or organization into a **readable intelligence surface**: what exists, what claims it makes, how healthy documentation is, and how repositories relate.
+
+Legacy code in this repository scraped README content into CSV. That remains a useful data path. The **strategic product** is broader:
+
+```
+GitHub repos
+    → harvest (README, metadata, structure signals)
+    → normalize
+    → join with ADL census / capability matrix / repo graph
+    → health, debt, claim, and architecture views
+```
+
+---
+
+## Why this is undervalued
+
+Most developers have many repositories and no portfolio map. This lab already maintains:
+
+- [ADL-Portfolio-Census](https://github.com/beyond-repair/ADL-Portfolio-Census)
+- [adl-capability-matrix](https://github.com/beyond-repair/adl-capability-matrix)
+- [aegis-repo-graph](https://github.com/beyond-repair/aegis-repo-graph)
+- [ADL-Governance](https://github.com/beyond-repair/ADL-Governance)
+
+RepoRover is the **operator-facing layer** over those systems — not a duplicate census.
+
+---
 
 ## Features
 
-- **Web Scraping:** Utilizes web scraping techniques to fetch README.md content from GitHub repositories.
-- **Content Processing:** Preprocesses the content by performing tasks like lowercasing, HTML tag removal, tokenization, and more.
-- **Duplicate Check:** Checks for duplicate entries to ensure data integrity.
-- **CSV Output:** Saves processed repository information in a CSV file for easy analysis.
+### Current (legacy v1)
 
-## Usage
+- Fetch README content from GitHub repositories
+- Basic text normalization (case, tags, tokenization)
+- Duplicate checks
+- CSV export for offline analysis
 
-1. Install the required dependencies:
+### Target (v2)
 
-    ```bash
-    conda install --file requirements.txt
-    ```
+| Capability | Description |
+|------------|-------------|
+| Repo health | Docs present, last push age, empty README detection |
+| Claim surface | Align descriptions with governance claim caps |
+| Dependency / relation graph | Consume or mirror aegis-repo-graph |
+| Technical debt signals | Stub density, missing tests, abandoned forks |
+| Architecture maps | Cluster by pillar (mind, physics, games, governance) |
 
-2. Run the script:
+---
 
-    ```bash
-    python RepoRover.py
-    ```
-
-3. Analyze the output CSV file (`readmeMD.csv`) containing processed repository data.
-
-## Example
-
-For a demonstration, let's explore the README.md content of a sample repository:
+## Quick start (legacy)
 
 ```bash
-python RepoRover.py https://github.com/example/example-repo
+# Install dependencies (see requirements.txt if present)
+pip install -r requirements.txt
 
-Requirements
-Python 3.x
-Conda (optional, for managing dependencies)
-Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+# Example invocation — adjust to actual entrypoint in tree
+python RepoRover.py
+```
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Output: processed repository documentation data (historically `readmeMD.csv`).
+
+---
+
+## Scope (claim-capped)
+
+**Does claim**
+
+- Assistance for portfolio visibility and documentation analysis  
+- Integration path with ADL governance artifacts  
+
+**Does not claim**
+
+- Full static analysis of every language  
+- Automatic legal compliance certification  
+- Replacement for GitHub Advanced Security products  
+
+---
+
+## Roadmap
+
+1. Stabilize harvest CLI and schema  
+2. Emit JSON as well as CSV  
+3. Join fields with portfolio census IDs  
+4. Optional local dashboard (read-only)  
+
+---
+
+## Related repositories
+
+| Repo | Role |
+|------|------|
+| ADL-Portfolio-Census | Locked inventory |
+| aegis-repo-graph | Typed repo relationships |
+| adl-capability-matrix | Compatible-build queue |
+| DevelopTool-Unified-Dev-Environment | Agent engineering UX thesis |
+
+---
+
+*Atomic Dream Labs — see the portfolio, not only the files*
