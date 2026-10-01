@@ -1,3 +1,21 @@
+<div align="center">
+
+[![Lifecycle](https://img.shields.io/badge/●_ARCHIVE-64748b?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance)
+[![Claim](https://img.shields.io/badge/Claim_0-22c55e?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance/blob/main/docs/CLAIM_VALIDATION.md)
+[![Governance](https://img.shields.io/badge/ADL--Governance-7c3aed?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance)
+
+```
+LIFECYCLE   ARCHIVE
+CLAIM       0
+NOT CLAIMED product · profit · deployment
+```
+
+</div>
+
+> **ARCHIVE QUEUE.** Historical only. Not a product.
+
+---
+
 # RepoRover-
 
 **Lifecycle:** ARCHIVED (Sweep-088)  
@@ -17,3 +35,14 @@ Use instead:
 See `ARCHIVED.md` and `CLAIM_STATUS.md`.
 
 Operator: `gh repo archive beyond-repair/RepoRover- --yes`
+
+
+---
+
+<div align="center">
+
+**REWRITE · BUILD · TRANSCEND**
+
+Governing source: [ADL-Governance](https://github.com/beyond-repair/ADL-Governance) · [Claim levels 0–5](https://github.com/beyond-repair/ADL-Governance/blob/main/docs/CLAIM_VALIDATION.md)
+
+</div>
