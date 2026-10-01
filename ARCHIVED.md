@@ -1,25 +1,25 @@
 # ARCHIVED
 
 **Classification:** ARCHIVED (Sweep-088 lock)  
-**GitHub `archived` flag:** still `false` — operator must run `gh repo archive beyond-repair/RepoRover- --yes`  
-**Tree SHA at audit:** `a74b77b5a020ebc2f0d7f6cd94a0c2518f6dbd06`
+**GitHub `archived` flag:** still `false` — operator may run `gh repo archive beyond-repair/RepoRover- --yes`  
+**Note:** Finish-job repair (2026-10-01) made the historical scraper clean-clone runnable. That does **not** promote this repo to ACTIVE product status.
 
 This repository is historical. Do not treat it as an ACTIVE portfolio-intelligence product.
 
 ## Why ARCHIVED (not RESEARCH, not ACTIVE)
 
-- Already listed on `ADL-Governance/docs/archive_queue.md`.
-- `ARCHIVED.md` existed since 2026-08-23 (`1fd0da5`) while README (2026-09-05 `a74b77b5`) re-advertised a v2 resurrection.
-- Product CI: **absent**. Workflows = Dependabot graph only (`total_count=1` dynamic). Releases = []. Tags = []. Branch = `main` only.
-- Demonstrated surface: one scraper script `RepoRover/RepoRover.py` plus a 71-byte CSV stub. No tests. No `.github/workflows` product file.
-- Governance census / capability / graph roles already live in `ADL-Portfolio-Census`, `adl-capability-matrix`, `aegis-repo-graph`, and `ADL-Governance`. RepoRover is **not** their successor.
+- Listed on `ADL-Governance/docs/archive_queue.md`.
+- Demonstrated surface: README scrape → NLP preprocess → CSV. No portfolio dashboard.
+- Governance census / capability / graph roles live in `ADL-Portfolio-Census`, `adl-capability-matrix`, `aegis-repo-graph`, and `ADL-Governance`. RepoRover is **not** their successor.
+- Product CI / releases / tags: absent.
 
 ## Claims
 
 | Feature | State |
 |---------|-------|
-| README scrape + CSV write (legacy script present) | UNVERIFIED (no tests / no CI) |
-| v2 health / claim / graph dashboard | PLANNED / SUPERSEDED by census+governance repos |
+| README scrape + NLP + CSV (demo / API) | VERIFIED after Finish repair (tests + demo) |
+| Explore HTML scrape | BEST-EFFORT / FRAGILE |
+| v2 health / claim / graph dashboard | NEVER IMPLEMENTED; SUPERSEDED by census+governance repos |
 | Product CI | ABSENT |
 | GitHub archive flag | UNVERIFIED (`archived=false`) |
 
