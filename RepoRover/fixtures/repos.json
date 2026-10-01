@@ -1,0 +1,14 @@
+[
+  {
+    "name": "sample-alpha",
+    "full_name": "fixtures/sample-alpha",
+    "html_url": "https://github.com/fixtures/sample-alpha",
+    "readme_fixture": "sample_alpha.md"
+  },
+  {
+    "name": "sample-beta",
+    "full_name": "fixtures/sample-beta",
+    "html_url": "https://github.com/fixtures/sample-beta",
+    "readme_fixture": "sample_beta.md"
+  }
+]
