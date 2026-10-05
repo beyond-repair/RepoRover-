@@ -18,7 +18,7 @@ NOT CLAIMED product · profit · deployment · portfolio intelligence
 
 # RepoRover-
 
-**Lifecycle:** ARCHIVED (Sweep-088) — runnable scraper sketch repaired for clean-clone verification.  
+**Lifecycle:** ARCHIVED (Sweep-088, re-audited Sweep-223) — runnable scraper sketch.  
 **Do not use as a dependency.** Do not treat as the account portfolio map.
 
 ## What this is
@@ -101,7 +101,7 @@ python -m RepoRover --explore
 pytest -q
 ```
 
-Tests cover preprocess, CSV write/dedup, and the offline demo pipeline with fixtures/mocks (no live Explore HTML).
+Tests cover preprocess, CSV write/dedup, and the offline demo pipeline with fixtures/mocks (no live Explore HTML). Sweep-223 local result: 6 passed. Remote workflow: `.github/workflows/tests.yml`.
 
 ## Project layout
 
@@ -111,16 +111,18 @@ Tests cover preprocess, CSV write/dedup, and the offline demo pipeline with fixt
 | `RepoRover/fixtures/` | Offline demo READMEs + `repos.json` |
 | `RepoRover/readmeMD.csv` | Default CSV (header stub in git) |
 | `tests/test_reporover.py` | pytest suite |
+| `.github/workflows/tests.yml` | Offline pytest on push/PR (Sweep-223) |
 | `requirements.txt` | pip deps (`requests`, `beautifulsoup4`, `nltk`, `pytest`) |
 
 ## Claims honesty
 
 | Feature | State |
 |---------|-------|
-| README scrape + NLP + CSV (demo / API paths) | Verified by local pytest + demo run after this repair |
+| README scrape + NLP + CSV (demo / API paths) | Verified by local pytest (6 passed, Sweep-223) |
 | Explore HTML scrape | Best-effort only; often broken on modern GitHub |
 | v2 portfolio intelligence product | Never implemented; superseded by ADL-* repos |
-| Product CI / releases | Absent |
+| Product CI | Workflow added Sweep-223; remote run not yet a completion claim |
+| GitHub archive flag | Still false; operator-only |
 
 ---
 
